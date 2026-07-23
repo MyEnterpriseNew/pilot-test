@@ -1,0 +1,7 @@
+<mirrors>
+<mirror>
+<id>git-pkgs-proxy</id>
+<mirrorOf>*</mirrorOf>
+<url>http://git-pkgs-proxy.company.com:8080/maven</url>
+</mirror>
+</mirrors>
