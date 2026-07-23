@@ -15,11 +15,17 @@
     </properties>
 
     <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
-        </repository>
+        <repositories>
+		    <repository>
+                <id>github</id>
+                <name>GitHub Packages</name>
+                <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
+            </repository>
+		    <repository>
+                <id>internal-proxy</id>
+                <url>http://git-pkgs-proxy.company.com:8080/maven</url>
+            </repository>
+        </repositories>
     </distributionManagement>
 
     <dependencies>
