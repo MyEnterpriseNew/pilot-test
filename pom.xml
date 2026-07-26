@@ -23,7 +23,7 @@
 		
         <repository>
                 <id>artifactory</id>
-                <url>http://localhost:8080/artifactory</url>
+                <url>http://localhost:8080</url>
                 <releases>
                 <enabled>true</enabled>
                 </releases>

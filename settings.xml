@@ -1,15 +1,21 @@
-<mirrors>
-<mirror>
+ <mirrors>
+<!-- <mirror>
 <id>git-pkgs-proxy</id>
 <mirrorOf>*</mirrorOf>
 <url>http://git-pkgs-proxy.company.com:8080/maven</url>
+</mirror> -->
+ <mirror>
+<id>artifactory</id>
+<mirrorOf>*</mirrorOf>
+<url>http://localhost:8080</url>
 </mirror>
-</mirrors>
+</mirrors> 
 
-<servers>
+
+<!-- <servers>
 <server>
 <id>artifactory</id>
 <username>${ARTIFACTORY_USERNAME}</username>
 <password>${ARTIFACTORY_TOKEN}</password>
 </server>
-</servers>
+</servers> -->
