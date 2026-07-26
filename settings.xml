@@ -1,9 +1,10 @@
 <settings>
   <mirrors>
     <mirror>
-      <id>proxy</id>
-      <mirrorOf>central</mirrorOf>
-      <url>http://localhost:8080/</url>
+      <id>git-pkgs-proxy</id>
+      <name>Git Packages Proxy</name>
+      <url>http://localhost:8080/maven</url>
+      <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>
 </settings>
