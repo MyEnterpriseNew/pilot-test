@@ -5,3 +5,11 @@
 <url>http://git-pkgs-proxy.company.com:8080/maven</url>
 </mirror>
 </mirrors>
+
+<servers>
+<server>
+<id>artifactory</id>
+<username>${ARTIFACTORY_USERNAME}</username>
+<password>${ARTIFACTORY_TOKEN}</password>
+</server>
+</servers>
