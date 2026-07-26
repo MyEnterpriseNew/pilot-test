@@ -15,17 +15,23 @@
     </properties>
 
     <distributionManagement>
-        <repositories>
-		    <repository>
+        <!--<repositories>
+		     <repository>
                 <id>github</id>
                 <name>GitHub Packages</name>
                 <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
+            </repository> 
+		</repositories> -->
+        <repository>
+                <id>artifactory</id>
+                <url>http://localhost:8080</url>
+                <releases>
+                <enabled>true</enabled>
+                </releases>
+                <snapshots>
+                <enabled>true</enabled>
+                </snapshots>
             </repository>
-		    <repository>
-                <id>internal-proxy</id>
-                <url>http://git-pkgs-proxy.company.com:8080/maven</url>
-            </repository>
-        </repositories>
     </distributionManagement>
 
     <dependencies>
