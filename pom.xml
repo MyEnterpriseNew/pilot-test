@@ -22,7 +22,7 @@
             </repository> -->
 		
         <repository>
-                <id>artifactory</id>
+                <id>proxy</id>
                 <url>http://localhost:8080</url>
                 <releases>
                 <enabled>true</enabled>
