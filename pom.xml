@@ -22,15 +22,9 @@
             </repository> -->
 		
         <repository>
-                <id>proxy</id>
-                <url>http://localhost:8080</url>
-                <releases>
-                <enabled>true</enabled>
-                </releases>
-                <snapshots>
-                <enabled>true</enabled>
-                </snapshots>
-            </repository>
+                <id>git-pkgs-proxy</id>
+                <url>http://localhost:8080/maven</url>
+        </repository>
     </distributionManagement>
 
     <dependencies>
