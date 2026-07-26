@@ -1,4 +1,9 @@
 <settings>
+    <server>
+    <id>github</id>
+    <username>${GITHUB_ACTOR}</username>
+    <password>${GITHUB_TOKEN}</password>
+  </server>
   <mirrors>
     <mirror>
       <id>git-pkgs-proxy</id>
