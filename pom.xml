@@ -15,13 +15,12 @@
     </properties>
 
     <distributionManagement>
-        <!--<repositories>
-		     <repository>
+        <!--<repository>
                 <id>github</id>
                 <name>GitHub Packages</name>
                 <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
-            </repository> 
-		</repositories> -->
+            </repository> -->
+		
         <repository>
                 <id>artifactory</id>
                 <url>http://localhost:8080/artifactory</url>
