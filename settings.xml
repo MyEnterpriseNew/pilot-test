@@ -1,0 +1,15 @@
+<settings>
+    <server>
+    <id>github</id>
+    <username>${GITHUB_ACTOR}</username>
+    <password>${GITHUB_TOKEN}</password>
+  </server>
+  <mirrors>
+    <mirror>
+      <id>git-pkgs-proxy</id>
+      <name>Git Packages Proxy</name>
+      <url>http://localhost:8080/maven</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+</settings>

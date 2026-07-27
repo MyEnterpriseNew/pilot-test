@@ -1,0 +1,58 @@
+name: Warm Proxy Cache
+
+on:
+  workflow_dispatch:
+  push:
+     branches: 
+        - main
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  warm-cache:
+    runs-on: ubuntu-latest
+
+    services:
+      git-pkgs-proxy:
+          image: ghcr.io/domdomegg.git-pkgs-proxy:latest
+          ports:
+            - 8080:8080
+
+      
+    steps:
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Download Package from GithHub Packages
+        run:
+            mkdir -p ~/.m2/settings.xml <<EOF
+            <settings>
+              <servers>
+                <server>
+                   <id>github</id>
+                   <username>${GITHUB_ACTOR}</username>
+                   <password>${GITHUB_TOKEN}</password>
+                </server>
+              </servers>
+            </settings>
+            EOF
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+
+      - name: Pull Artifact
+        run: |
+         mvn dependency:get \
+            -DremoteRepositories=github::default::https://maven.pkg.github.com/MyEnterpriseNew/pilot-test \
+             -Dartifact=com.example:pilot-test:1.0.0-SNAPSHOT
+
+      - name: Prime Proxy Cache
+        run: |
+            curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.pom
+
+            curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.jar
+       
