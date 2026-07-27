@@ -44,12 +44,12 @@ jobs:
       - name: Pull Artifact
         run: |
          mvn dependency:get \
--DremoteRepositories=github::default::https://maven.pkg.github.com/ORG_NAME/pilot-test \
-             -Dartifact=com.example:sample-lib:1.0.0
+            -DremoteRepositories=github::default::https://maven.pkg.github.com/MyEnterpriseNew/pilot-test \
+             -Dartifact=com.example:pilot-test:1.0.0-SNAPSHOT
 
       - name: Prime Proxy Cache
         run: |
-curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.pom
+            curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.pom
 
-curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.jar
+            curl http://localhost:8080/com/example/pilot-test/1.0.0-SNAPSHOT/pilot-test-1.0.0-SNAPSHOT.jar
        
