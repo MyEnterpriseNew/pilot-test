@@ -16,7 +16,7 @@ jobs:
 
     services:
       git-pkgs-proxy:
-          image: ghcr.io/domdomegg.git-pkgs-proxy:latest
+          image: ghcr.io/domdomegg/git-pkgs-proxy:latest
           ports:
             - 8080:8080
 
