@@ -24,8 +24,8 @@
 		    <!--<repository>
                 <id>git-pkgs-proxy</id>
                 <url>http://localhost:8080/Cached Artifacts</url>
-            </repository>
-        </repositories> -->
+            </repository>-->
+        </repositories> 
     </distributionManagement>
 
     <dependencies>
