@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>pilot-test</artifactId>
+    <artifactId>git-pkgs-proxy</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
@@ -15,17 +15,17 @@
     </properties>
 
     <distributionManagement>
-        <!--<repositories>
+        <repositories>
 		    <repository>
                 <id>github</id>
                 <name>GitHub Packages</name>
                 <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
-            </repository> -->
-		    <repository>
+            </repository> 
+		    <!--<repository>
                 <id>git-pkgs-proxy</id>
                 <url>http://localhost:8080/Cached Artifacts</url>
             </repository>
-        </repositories>
+        </repositories> -->
     </distributionManagement>
 
     <dependencies>
