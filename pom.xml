@@ -13,10 +13,12 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-	<repository>
-        <id>github</id>
-        <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
-    </repository>
+	<repositories>
+	    <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/MyEnterpriseNew/pilot-test</url>
+        </repository>
+	</repositories>
 
     <distributionManagement>
          <repository>
